@@ -1,0 +1,7 @@
+Project ideas : 
+
+1. django with nginx
+
+2. django with redis
+
+3. 

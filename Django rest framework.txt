@@ -1,0 +1,9 @@
+Django Rest Framework
+
+a. there are 3 types of APIs 1. Private 2. Partner 3. Public
+
+b. request / response will be in the form of JSON / XML
+
+c. rest api - endpoints - methods(CRUD) - headers(STATUS CODE) - data(JSON)
+
+

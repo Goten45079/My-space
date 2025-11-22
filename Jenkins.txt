@@ -1,0 +1,15 @@
+Jenkins : 
+Build types : 1.freestyle and 2.plpelines
+
+1. freestyle - for shell scripting kind of jobs
+
+------------------------------------------------------------------------------------------------
+
+2. pipelines
+a. uses groovy syntax
+b. pipeline is broken into different stages --> 1.cloning 2.building 3.testing 4.package 5.deployment
+
+1. Cloning : 
+
+
+----------------------------------------------- cron -----------------------------------------

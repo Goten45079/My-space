@@ -1,0 +1,76 @@
+Must : analyze all the charts from IG
+Must : check volume of call and put options --? which ever the side the volume is greater sell on that side
+
+My Trading Strategy
+
+NOTE : month starting do buying, month ending do selling
+
+Check : 21 EMA and 200 EMA crossover -- 15 min timeframe
+Check : Deviation for EMA
+Check : Stock option choosing -- high liquidity option only sometimes compromise
+Check : Price action with EMA, resistance and support
+
+1. Always put a stopLoss
+a. never risk more than 2% on the trade -- stopLoss should be 2% of the trade -- 2% risk expected, never change this
+
+i) Deviation 1 -- Trail the stopLoss to ZERO possition after the trade moving in the correct direction | Risk - price may return to orginal position and move up later | Reward - what if the price move in opposite direction - stopLoss is saved
+ii) Deviation 2 -- Follow the first rule followed by moving the stopLoss to 2% profits | Risk - trade may endup with 1:1
+iii) Deviation 3 -- Follow the first two and Analyse the market and put the stopLoss in the profitSide and Repeate | Risk - trade may endup with 1:2 or 1:3
+
+2. Keep the profits running and change the option position to the latest | Risk - Deviations of stopLoss | this is applicable for only selling trades
+
+3. Buy the same stock with profits ZINC, IDFC, 
+
+
+
+Zero - Hero trading strategy - buying
+
+1. Follow the trend
+2. Initial 2 weeks is the best time to implement this sterategy
+3. Use only trading profits for this sterategy
+4. High stopLoss - 10 to 20 percentage
+5. Put more that 1 lot - buy 2 lots at a time and with 2nd lot do scalping
+6. If needed put third lot and use for quick profits and scalping
+7.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Releastic calculation : 
+
+Aim : 10% per month
+Capital : 5 Lakhs
+No. of lots : 4
+Lots distribution : Max 2 per stock (can be changed with capital increase)
+Per week return expectation : 
+
+Stock : SBIN
+Lot Size : 750
+1. Selling price : Max 1.25 lakhs per lot
+2. expected return per trade : if option premium price 20 to 28 -- >8rs per lot and wait for exit or change the option
+3. expected loss : 2rs premium per lot -- > if option premium is greater than 20
+4. 
+
+
+
+
+
+my steratgy: follow the trend and dont expect too much, in a 10 points move capture 3 points
+
+
+
+
+
+
+
+Backup plan : if everyone has become a option seller in the future -- shift to forex trading

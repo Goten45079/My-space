@@ -1,0 +1,3 @@
+yet another markup language
+
+a. it is a serilization language

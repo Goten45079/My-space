@@ -1,0 +1,139 @@
+Shell Scripting
+
+https://quickref.me/bash
+
+a. ping -c 1 "www.google.com" -- for pinging the service and check
+b. echo $? -- gives the exit status of the command
+
+
+-------------------- exit status and return codes -- ranges between 0 and 255
+1. 0 = success
+2. other than 0 - error condition
+
+--------------------------- Commands -------------
+1. Traversing Directories "cd"
+a. cd <empty> -- takes us to the "root" directory
+b. cd .. -- first . represent current directory and second . is parent directory -- it take us to the parent directory
+
+2. Listing
+a. ls -laF -- long listing, include hidden files/directories, to display the type (file or directory)
+
+3. Filtering Files -- note : while practing create files script and scrapt
+a. ls -l scr?pt -- ? represent single charecter and can be any
+b. ls -l s* -- * represent any number of charecters and can be any
+c. ls -l scr[ai]pt -- in the bracket mean a or i
+d. ls -l scr[a-i]pt -- mean list the files/directories which range in between a and i
+e. ls -l scr[!a]pt -- [!a] mean not a at that poisson
+
+4. Handeling Files -- cp source destination, mv source destination
+a.
+
+5. Links
+a. ln file1 file2 = physical link 
+b. ln -s file1 file2 = symbolic link
+
+6. Directories
+a. 
+
+7. Find and locate
+a. find . -empty -- to find all the empty files for the current directory
+b. 
+
+8. Grep -- to find specific data/line of data in some file --? global regular expression print
+a. grep "hello" */file name
+
+9. Sort -- for sorting data -- sort fileName -- by default it will sort words
+a. sort -n nums -- for sorting numbers
+b. sort -M months -- for sorting by time stamp
+
+10. PS -- ps stand for process, PID -- process id, PPID -- parent process id
+a. 
+
+11. Checking disk space -- df -- device file system
+a. df -h -- files system info in human readable state
+b. du -- space usage of files
+c. du -sh * | sort -nr -- sort by numberic and reverse order
+
+12. Mounting
+a. mounting is attaching external filesystem to the internal file system of a container/VM
+
+13. SSH keys
+a. ssh-keygen -t rsa -- to produce rsa key-value pairs
+b. 
+
+14. IPtables -- it is a firewall for linux that will monitor incoming and out going packets
+a. iptables -L -- to find the list of 
+b. 
+
+15. UFW -- uncomplicated firewall -- basic backend firewall for linux with optimal default configurations
+
+16. other commands
+a. 
+
+------------------------------------- Variables -------------------- there are two types of variables -- system and user defined
+
+17. Environmental variables
+a. printenv -- to view the env variables
+b. let HOSTNAME is env variable -- use "printenv HOSTNAME" or "echo $HOSTNAME" to print the value
+c. use "set" to view all the env variables
+
+18. user defined variables
+a. before creating a variable check if there is any variable with the same name use "echo $variableName"
+b. variableKey=variableValue -- to create a new local variable
+c. to create a global variable first create a local variable and export as golbal variable
+d. use "export variableName" to export it to global variable
+e. use "unset variableName" to delete the env variable
+f. 
+
+19. PATH env variable -- this is system environmental variable
+a. echo $PATH -- to view the path variable
+b. PATH=$PATH:/<newPath> -- this will add the new path variable
+c. 
+
+20. Variable array
+a. my_array = (one two five ten)
+b. to print or access -- echo ${my_array[2]}
+c. 
+
+-------------------------------------------- permissions -------------------------
+
+21. 
+a. Useradd -D -- to view all the default parameters if a user is created
+b. cut -d: -f1 /etc/passwd | wc -l -- to find the number of users
+c. addgroup <groupName> -- to create a new group
+d. usermod -G <groupName> <userName> -- this will add the user to a group
+e. 
+
+22. file permissions
+a. permissions changes based on octal representations
+
+23. file sharing
+a. 
+
+-------------------------------------------- Scripting ----------------------------
+24. 
+a. 
+
+25. if statement
+a. 
+
+------------------------------------ user input ---------------------
+26. read -p "enter something" <name of the variable> --> -p stands for prompt
+
+---------------------------------------------------------------------------------------
+27. use : isql -S servername -U username -P password --> to connect to the database server
+
+
+
+
+
+
+
+
+
+
+
+my comments : 
+
+I conducted in-person training sessions for new office joiners, where I shared all the necessary documents and links, 
+actively engaging with them to clarify doubts and provide real-time face-to-face, and delivering in-person knowledge transfer sessions to ensure a seamless transition into their roles within the organization.

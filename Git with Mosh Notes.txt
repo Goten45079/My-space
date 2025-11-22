@@ -1,0 +1,132 @@
+Git with Mosh
+
+commits in git are immutable, once created cannot be changed
+
+git remote add origin <remote repo url>
+
+1. Git configuration
+-- git config --global -e  #to check git configurations
+
+2. Snapshots  #example : commit is a snapshot
+--  
+
+
+have to watch second module one more time
+
+
+----------------------- Git History ----------------
+1. Git log --> to view the history of logs -- author, date, message etc.,
+commit 3cdbf43759c18503d6cb827602b031bf5d647872
+Author: reddysprakash <prakashreddy7329@gmail.com>
+Date:   Sat Aug 5 18:47:46 2023 +0530
+
+    updated the file
+
+2. git log --oneline --> to view the commits in single lines
+
+3. git log --oneline --stat --> to view all the commits in detail -- number of files changed or added etc.,
+
+4. git log --oneline -3 --> to view the latest 3 commits
+
+5. git log --oneline --author=reddysprakash --> to view the commits by a specific author
+
+6. git log --oneline --after="yesterday" or --after="2020-03-04" or --before="2021-09-07" --> used to filter the logs by date
+
+7. git log --oneline --grep="updated" --> searching commits by message -- this is case sensitive
+
+8. git show <commitID> --> to view the commit and can also use "git show HEAD~2" to view the second commit from the head
+
+9. git diff HEAD~2 HEAD --> to view the difference between two commits in the repo
+
+10. git diff HEAD~2 HEAD <fileName> --> to view the difference between two commits in a specific file
+
+11. git diff HEAD~2 HEAD --name-only, --name-status --> to see the difference between the commits
+
+12. finding bugs using bisect
+
+13. git shortlog -n -s -e --before="" --after="" --> to view the contributions to the repo
+
+14. git log --oneline --stat or --patch <fileName> --> to view the commit history of a file
+
+15. restore a deleted file
+git log --oneline <fileName> -- to find the last commit of the file
+git checkout <commitID> <fileName>
+then commit the changes
+
+16.git blame <fileName> --> to see who done/added a specific line of code
+
+17. git tag v1.0 <commitID> --> to give a version tag to a commit
+
+---------------------------------- branching -------------------------------
+
+1. git branch <branchName> --> to create a new branch
+
+2. git switch/checkout <branchName> --> to move between the branches
+
+3. git branch -m <branchName> <newBranchName> --> to change the branch name
+
+4. git log --oneline master..<branchName> --> to view the difference between the branches
+
+5. there are two types of merges a)fastforward(not recomended) b)3-way merge
+
+6. git merge <branchName> --> make sure you are on master branch while doing fastforward merge
+
+7. git merge --no-ff <branchName> --> to make no fastforward merge (which is good if needed to revert the changes)
+
+* after merging the branches we should delete the branches
+
+8. git merge --abort --> to abort the merge(undoing the merge)
+
+9. git reset --merge HEAD~1 --> to undo the merge and get back to the last commit
+
+10. watch 14 and 15 again
+
+11. git rebase master --> you should be on the branch and then will rebase the commit and then make a fastforward commit
+
+12. picking files from another branches
+cherry picking
+
+----------------------------------- collaboration ------------------------- 
+
+1. git fetch + git merge = git pull
+
+2. 
+
+----------------------------------- Rewriting the history ----------------------
+
+1. golden rule : do not rewrite public history
+2. rewriting the private history is the best practice
+
+3. git reset -hard/mixed/soft HEAD~1 --> do not use this to undo a commit after pushing to the remote repo, instead use the below
+
+4. git revert --> this will make a new commit that will undo the previous changes
+
+5. git revert --no-commit HEAD~3..HEAD --> this will revert last 3 commits and add to the staging area
+
+6. git reflog --> use this to view the lost commits
+
+7. git reset --hard <commitID> --> use this to move the HEAD to the commit so that you can recover the lost commits
+
+8. git commit --amend OR git commit --amend -m "message" --> use this to modify the previous commit
+
+9. git rebase -i <commitID> --> this is rebasing in interactive mode
+
+10.
+
+
+💎 Git Commands
+Here is a list of the top 10 Git commands that I use daily in my work:
+
+💫 git clone: Clone a repository into a new directory.
+💫 git status: Show the working tree status.
+💫 git add: Add file contents to the local staging area.
+💫 git commit: Record changes to the repository.
+💫 git push: Update remote refs along with associated objects.
+💫 git pull: Fetch from and integrate with another repository or a local branch.
+💫 git checkout: Switch branches or restore working tree files.
+💫 git branch: List, create, or delete branches.
+💫 git merge: Join two or more development histories together.
+💫 git log: Show commit logs.
+💫 git rebase: allows you to move or combine a sequence of commits to a new base commit. It is often used to maintain a clean and linear project history
+
+hashtag#DevOps hashtag#GIT hashtag#CICD hashtag#commands

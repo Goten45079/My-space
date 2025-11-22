@@ -1,0 +1,16 @@
+for more info visit : https://spot.io/resources/kubernetes-architecture/11-core-components-explained/
+
+Kubernetes also known as K8s is a open source system for automated deployment, scaling and management of contanerized applications
+
+kubectl -- it is command line interface for interacting with kubernetes
+
+K8 architecture -- contains one masternode and few slave nodes
+1. each node has a kubelet running on it
+2. smallest unit on k8 is a pod which is abstraction over a container
+
+a. minikube start -- to start the cluster locally
+b. minikube status -- to check the status of the cluster
+c. 
+
+--------------------- kubectl
+a. 

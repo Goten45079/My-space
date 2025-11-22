@@ -1,0 +1,12 @@
+MS build is used for building .NET application and everything that is to be build is configured in XML file
+
+extension for configuration xml file is C# - .csproj
+
+inside the xml there are four different parts that would be configured 
+a. properties -- decide to build or clean the project/application
+
+b. items -- helps in deciding all the files that to be included and excluded for the build -- only the files that are configured for compilation will go fo the build
+
+c. targets -- it helps in which order files are compailed to build 
+
+d. tasks -- additional jobs which are not a part of the project are performed -- ususlly coding logics and build activities

@@ -1,0 +1,7 @@
+Full interview preparation : 
+
+1. Tell me about your self
+a. collage education
+b. internship during collage
+c. project staples SRE
+d. project BT DevOps

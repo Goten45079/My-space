@@ -1,0 +1,74 @@
+1. TDD to be implemented for new requirements (% Unit Test cases written before / during actual development )
+-- Monitored and ensured that developers adhered to Test-Driven Development (TDD) practices to maintain high code quality and robust testing standards
+
+2. Code coverage i.e. writing Unit test cases for the requirements
+-- Wrote unit test cases for the assigned tasks to ensure optimal code coverage
+
+3. Increase in Cyclomatic complexity of files changed
+-- Ensured Cyclomatic Complexity remained within acceptable limits by leveraging SonarQube, thereby maintaining code quality and reducing technical debt
+
+4. Total BCE / Month
+-- I consistently maintained a BCE score of 45+ during Python development, and in the later months, I received a BCE exemption for handling OS maps and DevOps tasks.
+
+5. Writing and performing Acceptance test for requirements
+-- Executed acceptance tests through Jenkins CI pipelines
+
+6. Developer VM low disk space management
+-- Monitored low disk space on virtual machines using Dynatrace, ensuring proactive identification and resolution of storage issues
+
+7. Issue Resolution of Commits leading to Pipeline failure (Feature and Release)
+-- Maintained Jenkins feature and release branch pipelines, identifying and reporting commits causing pipeline failures to ensure smooth CI/CD operations
+
+8. Minimum No of Commits expected
+-- Committed to Git regularly, ensuring proper version control for configurations
+
+9. Cyclomatic complexity to be addressed before code commit
+-- Checked Cyclomatic Complexity of feature branches in SonarQube before merging into the release branch to ensure code quality and maintainability
+
+10. Code review sessions with Platform
+-- Actively participated in code review sessions to ensure code quality, identify potential issues, and promote best practices within the development team
+
+11. Unit test and Acceptance test related failures in Jenkins , Mobius to be addressed
+-- Addressed unit test and acceptance test failures in Jenkins and Mobius, collaborating with developers to resolve issues and ensure successful builds
+
+12. Fix CST & IVVT issues. Participate on IVVT defect calls
+-- Collaborated with the ASG team to resolve Python-related issues in production, ensuring system stability and seamless operations
+
+13. Housekeeping in lower environments
+-- Performed server housekeeping by monitoring system health and performance through Dynatrace, ensuring optimal resource utilization and uptime in nonprod environments
+
+14. Vulnerabilities Check and Closure - work side by side with Environment / Vulnerability coordinator and resolve them on the machines assigned to you
+-- Conducted vulnerability checks and closures by working closely with the Environment/Vulnerability Coordinator, promptly resolving issues on the assigned machines to ensure system security
+
+15. Keep environment sheet up-to-date. Provide inputs / environment feedback / to Infra coordinator in your team
+-- Maintained the environment sheet up-to-date and provided valuable inputs and feedback to the Infra Coordinator, ensuring accurate and efficient management of the infrastructure.
+
+16. Patches Installation on lower environments
+-- Successfully installed patches on lower environments for the servers assigned to me, ensuring system stability and security
+
+17. Every developer should participate in Root Cause Analysis for defects
+-- Partiipated in RCA calls
+
+18. Develop and follow Code Checklist, Design Checklist, Deployment Checklist
+-- Developed and adhered to comprehensive Code, Design, and Deployment checklists, ensuring consistency, quality, and smooth deployment processes across projects
+
+19. Participation in daily scrum calls
+-- Regularly participated in daily scrum calls, providing updates on progress, discussing blockers, and collaborating with the team to ensure timely delivery of tasks
+
+20. No of knowledge sharing sessions conducted
+-- Conducted multiple knowledge-sharing sessions focused on DevOps practices, equipping the team with the skills and knowledge to be future-ready
+
+21. Get KT and become productive in new area in PIPeR
+-- Acquired Knowledge Transfer (KT) and quickly became productive in the new area of PIPeR, ensuring efficient contributions to the team's goals
+
+22. Unplanned leaves
+-- Took unplanned leaves only in the case of unexpected health issues, ensuring minimal disruption to work and team progress
+
+23. No of trainees trained
+-- Provided Knowledge Transfer (KT) to new joiners on Python and DevOps, helping them get up to speed and integrate seamlessly into the team
+
+24. MLT or WINGS certfication or any external certification
+-- Successfully earned the external AZ-104 certification, strengthening skills in Azure administration and cloud infrastructure management
+
+25. Mandatory DevOps Knowledge
+-- Ensured a strong foundation in mandatory DevOps knowledge, covering core concepts and practices essential for seamless development and operations integration

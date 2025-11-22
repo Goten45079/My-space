@@ -1,0 +1,29 @@
+The Flow : 
+
+1. Docker - create two mini projects and deploy - must be multi container - contain swarm
+
+2. Kuberneties - to keep myself ready for the future
+
+3. Git with bitbucket and github
+
+4. Python APIs - django -- backend python
+
+4.5. Redis - inmemory noSql DB
+
+5. Learn linux - then get out
+
+6. mongodb intermediate level
+Here are some topics you can learn in MongoDB up to a beginner level:
+
+Installing and setting up MongoDB
+Basic CRUD (create, read, update, delete) operations in MongoDB
+Understanding collections and documents in MongoDB
+Querying data using the MongoDB shell
+Creating and dropping databases and collections in MongoDB
+Understanding BSON (Binary JSON) format in MongoDB
+Inserting and retrieving data using MongoDB drivers (such as PyMongo for Python)
+Understanding the MongoDB aggregation pipeline
+Creating indexes in MongoDB for improved performance
+Understanding the MongoDB Atlas cloud database service
+These topics will give you a good foundation in MongoDB and allow you to start working with the database.
+

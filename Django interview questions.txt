@@ -1,0 +1,6 @@
+Django interview questions : 
+
+1. Explain django architecture
+a. Django is a high-level python-based free and open-source web framework that follows the model-view-template(MVT) architecture pattern. It is maintained by Django Software Foundation (DFS), US based indepandent organnization
+
+2. 

@@ -1,0 +1,18 @@
+list of important links for hacking methods:
+
+https://www.quora.com/How-do-I-hack-an-Instagram-account-ID-using-Kali-Linux
+
+https://www.simplilearn.com/top-kali-linux-tools-article
+
+mrphish - pishing hack
+
+
+My ask : 
+1. mail send avutundi login autee -- windows nundi
+
+Reverse shell
+https://github.com/karma9874/AndroRAT -- download and install manually
+
+https://www.quora.com/How-can-I-download-and-use-the-Pegasus-spyware-software
+
+Trojan - RAT (remote access tool)

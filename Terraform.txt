@@ -1,0 +1,33 @@
+Terraform important notes : 
+
+we use HashiCorp Configuration Language (HCL) to write terraform templates
+
+structure in a single file
+
+a. provider
+b. variables
+c. resources
+d. output
+
+structure if the infrastructure is big
+
+a. main.tf
+b. variables.tf
+c. output.tf
+d. backend.tf - terraform.tfstate
+e. module
+
+state management is the heart of the terraform
+
+-------------------------------- day to day task of devops engineer -------------------------------------
+
+There are 3 types of provisioner
+a. file provisioner -- used to copy files
+b. remote-exec -- used to give shell commands
+c. local-exec -- 
+
+
+------------------ simple terraform-python project
+
+a. create a VPC
+b. create a 

@@ -1,0 +1,146 @@
+Hay this is docker for prakash
+
+A. What is the difference between RUN and CMD ? RUN get executed at the time of creating the image and CMD is a specific command that get executed when the container is started from the image
+
+1. docker version  #for knowing the docker version and to know the clint and docker engine versions
+
+2. docker images (or) docker image ls  #both works the same -- to show the docker images available in local
+
+3. docker ps  #used for seeing the containers which are currently running
+
+4. docker ps -a  #used to see all the containers including the stopped and running "ps"--processes "-a"--all
+
+5. docker build -t <nameOfTheImage> . #to create/build docker image -- '-t' is tag to give name to image -- '.' represents the current folder
+
+6. docker pull <imageName>  #to pull the image from docker hub
+
+7. docker run <imageName>  #to run the docker container (a container will be created from image) this will also pull the image from docker hub if the image is not available locally
+
+8. docker run -d <imageName>  #to run a docker container in detach mode
+
+9. docker rm <containerID>  #to delete the container
+
+10. docker rmi <imageName>  #to delete the image (should not have any containers depending on it) if there are any running or stopped containers from this image it will result in conflict
+
+11. docker rmi <imageName> --force  #to delete the image by force
+
+12. docker container stop <containerID>  #to stop a running container
+
+13. docker container start <containerID>  #to start a stopped container
+
+14. docker container attach  #to bring the running container to interactive mode
+Note : instead of above two commands we can use : docker start -i <containerID>
+
+15. docker run -it <imageName>  #to run the contaier in interactive mode "-it" interactive
+NOTE : press "ctrl P" and "ctrl Q" to come out of the interactive mode in docker
+
+16. navigation through filesystem.
+NOTE : we are going to use 'centos' for this
+
+a. winpty docker run -it centos  #to bringup centos in interactive mode -- press "ctrl Q" to quit interactive mode
+b. standard input is keyboard, standard output is screen
+c. 
+d. search : grep(global regular expression print) this is case sensitive
+   Use : grep word fileName
+   Use : grep -i word fileName  #'-i' used to make it case insensitive
+   Use : grep -i -r word fileName/directory/. (or) grep -ir word fileName/directory/.  #'-r' stands for recursive
+
+e. find : find directory(optional) -type d/f -name/-iname "directory/fileName/pattern*" --? this is used to find directory or files present on the filesystem
+
+f. running multiple commands
+   Use : mkdir test; cd test; touch file1.txt; echo done  #commands will execute one by one regardless of failure
+   Use : mkdir test && cd test && touch file2.txt && echo done  #commands will stop executing if any of the command fails
+   Use : mkdir test || echo "this dirctory exists"  #any one of the command will be executed accordengly
+
+g. environvemental variable : printenv  #to print all the environmental variables  #these are usually key-value pairs
+   Use : printenv variableName (or) echo $variableName  #this is used to view a perticular variable #casesensitive
+   Use : 
+
+h. creating users and groups
+   Use : useradd -m name  #to create a new user with home directory
+   Use : usermod -s /bin/bash userName  #to modify the shell
+   Use : less /etc/passwd  #to view the users
+   Use : less /etc/shadow  #to view passowrds #only root user can view passwords
+   Use : docker exec -it -u userName containerID bash  #to login as a user
+
+i. changing permisions 
+   Use : chmod ugo+rwx  #u-user, g-group, o-others, r-read, w-write, x-execute
+
+17. Creating images and cofiguring Dockerfile
+
+18. Docker image tags
+    Use : docker build -t Name:version2.0 .  #tagging while building the image
+    Use : docker image tag Name:version Name:renameversion  #changing tag after building the image
+    Use : docker image remove Name:version  #to remove the tag
+    Use : docker image tag imageID imageName:latest  #to make the image tag to the latest
+
+19. Sharing docker images
+
+20. Running containers
+    Use : docker run -d --name <desiredContainerName> imageName  # --name to give the container a name (if not docker generate a random name for the contaier)
+    Use : docker logs containerId  #to view the container logs
+
+21. Ports
+    Use : docker run -d -p 80:3000 --name <desiredCotainerName> imageName  #3000 is port on container -- 80 is port on host -- mapping container port to host port  -- '-p' stand for port
+
+22. docker exec containerID command  #exec is used to run the commands on a running container
+    docker exec -it containerID sh  #to bring the running container to intercetive shell
+
+23. Volumes -- it is a storage outside of the container or a vm -- it can be on the host or on the cloud
+
+24. what is the difference between entryPoint and CMD
+
+25. multi stage build -- it is used to reduce the size of the image
+
+===============================================================================================================================================
+26. normal docker file
+
+FROM ubuntu
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install -r requirement.txt
+
+ENTRYPOINT ["python3"]
+CMD ["manage.py", "runserver", "8000"]
+
+=================================================================================================================================================
+27. Multi stage build
+
+# stage 0
+FROM ubuntu as build
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install -r requirements.txt
+
+# stage 1
+FROM alpine as runtime
+
+WORKDIR /app
+
+COPY --from=build /app/binFile /app
+
+CMD ["./binFile"]
+
+28. docker run -d --mount source=<volumeName>, target=/app <imageName>
+
+--------------------------------------- docker networking ------------------------------------
+
+29. bridge network is defaut, overlay network is used in k8s and docker swarn 
+
+------------------------------------------ docker compose ------------------------------------
+
+30. docker-compose -f nameOfTheFile.yaml up -d
+
+docker-compose file 
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+Learning SQL
+
+database is a collection of data stored in a format that can easily be accessed
+
+DBMS will manage the data -- there are two types of DBMS -- relational and non-relational/nosql data base mangement systems
+RDBMS -- we store data in tables will have relation to each other
+
+-----------------------------------------------
+Key words and there use :
+
+DISTINCT --? to remove duplicates for selected columns
+SELECT DISTINCT state FROM <tableName>
+
+SELECT name, unit_price AS 'unit price', unit_price * 1.1 AS 'new price' FROM products; -- products is table name
+
+IN --? to combine multiple logical operators
+SELECT * FROM table_name where location IN ("india", "us", "uk")
+
+BETWEEN --? used to get values in between two values
+SELECT * FROM table_name where date BETWEEN '2019-01-01' AND '2024-01-01'
+
+LIKE --? used to find specific pattern
+SELECT * FROM table_name where name LIKE 'pra%' --? % is for any number of charecters, _ is for one charecter each
+
+REGEXP --? regular expression -- ^$|[]
+SELECT * FROM customers WHERE first_name REGEXP 'ELKA|AMBUR';
+SELECT * FROM customers WHERE last_name REGEXP 'EY$|ON$';
+SELECT * FROM customers WHERE last_name REGEXP '^MY|SE';
+SELECT * FROM customers WHERE last_name REGEXP 'B[RU][R]';
+
+ORDER BY -- for sorting DESC
+
+LIMIT <number>
+
+JOINS --? (inner)join, left(outer)join, right(outer)join, full(outer)join
+
+===============================================================================================================================================
+
+constraints --? defines what type of data that can be input to a column into each table -- not null, primary key, unique, varchar, bool, integer, text etc.,
+
+database index --? it is a data structure used by the data base to retrive the data in table with more faster
+
+schema --? it is a collection of tables, indexes, functions etc which defines the database architecture
+
+clause --? it is used to filter the data or arrange in specific foramte -- where, limit, order by, and, or, like, regexp
+
+case() function --? it is a way to implement if-then-else logic in sql
+
+
+
+

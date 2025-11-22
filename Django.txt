@@ -1,0 +1,428 @@
+Django -- topic by topic --------- Django5, Django7, Django11, Django15
+
+1. It is MVT architecture models, views and templates
+
+site <=> urls <=> views <=> (models - this have the connection with the DB) and (templates) -- this is the flow chart
+views -- is business logic
+
+----- The Flow ----
+a. create a virtual environment -- recomended
+b. activate the environment
+c. install django and other dependancies
+d. create a project
+e. run server and check if it is working
+f. create apps
+g. build views
+h. configure urls -- project or app level
+i. work with templates
+j. work with models
+k. do CRUD operations
+l. 
+
+----- process ------
+
+A. create a project (before creating the project we can be in local or in the virtual env)
+B. create a application/app
+C. create the views
+D. configure the URLs
+E. run the application and test
+
+2. a good practice
+
+---- create a virtual environment -- STEP 1
+a. pip install virtualenv -- 'virtualenv' is a lib used for creating virtual env
+b. virtualenv <name the env> -- virtual env is created with this command -- python -m venv <envName> -- can also be used to create a virtual env
+c. source ./<name the env>/Scripts/activate -- use this to activate the virtual env this is in windows, source ./<name the env>/bin/activate -- this is for linux
+d. deactivate -- use this to deactivate the virtual env
+
+---- install django -- keep the env active and install django lib -- STEP 2
+a. pip install django
+b. django-admin  -- to view all the sub commands
+
+---- starting a project -- it will create a boilerplate file to start with the project -- STEP 3
+a. django-admin startproject <projectname>
+b. cd <projectname>
+c. python manage.py runserver  -- to start a server (runs on port 8000)
+d. python manage.py runserver <port number> -- to run on desired port number
+e. copy paste the url to browser for verifying everything is working fine
+
+---- creating a application/app -- STEP 4
+a. django-admin startapp <app name> OR python manage.py startapp <app name>  -- can use any one, no differnece in behaviour -- it creates the app
+b. after creating a app, go to seetings.py and in INSTALLED_APPS add the app name at the bottom
+
+------------------------ creating view -- views.py file will be there in application/app -- STEP 5
+a. after creating a app, go to seetings.py and in INSTALLED_APPS add the app name at the bottom
+b. now go to view.py and create a view -- these are two types function based and class based views -- we can have multiple views inside the same file
+
+ from django.http import HttpResponse
+ # Create your views here.
+
+ def hello(request):
+     return HttpResponse("<h1>hello hay</h1>")
+
+-------------------------- configuring URLs -- project level urls  -- do not prefer this
+a. go to urls in the project directory and add the url pattern
+
+from myapp1 import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('hello/', views.helloMessage)
+]
+
+---- configuring URLs -- application level urls -- please prefer this -- STEP 6
+a. create/copy the urls.py file to the apps
+-- project level urls
+from django.contrib import admin
+from django.urls import path
+from django.conf.urls import include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('myapp1/', include('myapp1.urls')),
+    path('myapp2/', include('myapp2.urls'))
+]
+
+-- app level urls
+from django.urls import path
+from myapp2 import views as ma2
+
+urlpatterns = [
+    path('sentence/', ma2.aLine)
+]
+
+
+--------------------------- templates -- static and dynamic -- inserting data -- STEP 7
+a. create a <templates> directory under project
+b. go to settings.py and in templates=>'DIRS' add/define the path to templates directory in the project
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, "templates")],----------------------------------
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+---- templates dynamic data -- inserting data -- STEP 8
+a. create a dictionary in views.py and pass in the context
+
+def aTemplate(request):
+    myDict = {'lastName' : 'Reddy'}
+    return render(request, 'templatesApp/index.html', context=myDict)
+
+b. in template.html file define the place to render dynamic data with {{key (from the dictonary}}
+
+<p>hello this is prakash {{lastName}}</p>
+
+c. add the change to the urls -- project or app level
+
+path('template', views.aTemplate),
+
+------------------------ inserting static files -- images, styleSheets, javaScript -- STEP 9
+a. create a static folder under project directory
+b. go to settings.py and bleow staic files insert below
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
+
+c. create a folder for images and put in some images
+d. add django tag {% load static %} in html file and add it under 'doctype'
+e. adding files should be in the below formate
+<img src="{% static 'images/ironMan.jpg' %}" width="400">
+
+---- using CSS
+a. 
+
+
+---------------------- Models --------------------
+a. configure database -- any
+
+---- configuring database -- here we use mysql
+a. create a database
+b. go to settings.py change/config accordengly
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'passengerDB',
+        'USER': 'root',
+        'PASSWORD': '@1T5@7i4h6n2v3'
+    }
+}
+
+c. go to command prompt and give 'python manage.py shell'
+d. shell will get opened
+ give -- from django.db import connection
+ give -- c = connection.curser()
+
+if there is no error then the configure/connection to the DB is good
+
+---- creating model
+a. go to models.py file and create a class as below -- models.Model - here we are inherating another class 
+
+class passenger_model(models.Model):
+    passenger_id = models.CharField(max_length=10),
+    passenger_name = models.CharField(max_length=30),
+
+b. after creating model class do migration -- use 'python manage.py makemigrations'
+c. python manage.py migrate -- to create tables on the DB
+
+
+--------------------- using models in views -------------
+a. from django.shortcuts import render
+from train.models import passenger_model
+# Create your views here.
+
+def passenger_info(request):
+    passengers = passenger_model.objects.all()
+    passDict = {
+        'passengers' : passengers
+    }
+    return render(request, 'template/index.html', passDict)
+
+b. 
+
+--------------------- Django admin ------------------- in virtual env
+a. python manage.py createsuperuser -- use this to create a super user
+b. http://127.0.0.1:8000/admin/ -- reddysprakash, @1T5@7i4h6n2v3
+c. 
+
+
+-------------------- Django ORM -- object relation maping
+a. 
+
+-------------------- Django Forms -- collecting data from end user -- it will be same a creating models
+a. under app create forms.py file
+b. from django import forms
+c. crate a class and inherit the calss forms.Form
+
+from django import forms
+
+class basicinfo(forms.Form):
+    first_name = forms.CharField()
+    last_name = forms.CharField()
+    email = forms.CharField()
+
+d. create a view 
+
+from django.shortcuts import render
+from . import forms
+
+# Create your views here.
+
+def userregisteration(request):
+    form = forms.basicinfo()
+    return render(request, 'index.html', {'forms' : form})
+
+e. create a template {{form.as_p or form.as_table or form.as_ul}}
+
+<h2>user registeration</h2>
+    <form action="post">
+        {{forms.as_p}}
+    </form>
+
+f. add a csrf token -- {% csrf_token %}
+
+<h2>user registeration</h2>
+    <form action="post">
+        {{forms.as_p}}
+        {% csrf_token %}
+    </form>
+
+g. now configure the URLs
+
+from django.contrib import admin
+from django.urls import path
+from formsapp import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('forms/', views.userregisteration)
+]
+
+f. cleaning data -- custom clean method
+
+def clean_first_name(self):
+        input_first_name = self.cleaned_data.get('first_name')
+        if len(input_first_name) > 15 :
+            raise forms.ValidationError('First Name Must be Less than 15 Characters')
+        return input_first_name
+
+-- CSRF token -- cross site request forgery -- it is automatically included in the form -- it is a hiden token
+a. 
+
+------------- model forms --
+a. -- create model
+
+from django.db import models
+
+# Create your models here.
+
+class myProject(models.Model):
+    startdate = models.DateField()
+    enddate = models.DateField()
+    name = models.CharField()
+    assignedTo = models.CharField()
+    priority = models.IntegerField()
+
+b. -- create forms
+
+from django import forms
+from modelforms.models import myProject
+
+class projectform(forms.ModelForm):
+    class Meta:
+        model = myProject
+        fields = '__all__'
+
+c. -- create views
+
+----------------------------------------------- CRUD operations ------------------
+-------------------- function based views --------------
+a. READ
+
+def studentView(request):
+    student = Students.objects.all()
+    return render(request, 'template/index.html', {'student' : student})
+
+b. CREATE
+
+def createStudent(request):
+    form = Students()
+    if request.method == 'POST':
+        form = Students(request.POST)
+        if form.is_valid:
+            form.save()
+        return redirect('student/')
+    return render(request, 'template/create.html', {'form' : form})
+
+c. DELETE
+
+def deleteStudent(request, id):
+    Student = Students.objects.get(id=id)
+    Student.delete()
+    return redirect('student/')
+
+d. UPDATE
+
+--------------------- class based views -----------------
+a. READ
+
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.views.generic import View
+
+# Create your views here.
+
+class Iamaview(View):
+    def get(self, request):
+        return HttpResponse('<p>hello</p>')
+
+------------------------ session management ---------------------
+http - stateless - scalability advantage
+session tracking - is to maintain state accross the site - dispite statelessness of http
+session - activity between login and logout
+
+a. cookie support checking
+
+seiiting a cookie in views
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def set_cookie(request):
+    request.session.set_test_cookie()
+    return HttpResponse("<p>hello there</p>")
+
+b. deleating the cookie
+
+def page2(request):
+    if request.session.test_cookie_worked():
+        print("cookies are enabled")
+        request.session.delete_test_cookie()
+    return HttpResponse("<p>cookies are working</p>")
+
+c. urls : 
+from cookie import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("hello/", views.set_cookie),
+    path("page2/", views.page2)
+]
+
+d. after writing the above do migrations
+
+------------- page visit count using cookie
+a. def countViews(request):
+    if "count" in request.COOKIES:
+        count = int(request.COOKIES["count"]) + 1
+    else:
+        count = 1
+    response = render(request, "template/count.html", {"count" : count})
+    response.set_cookie("count" , count)
+    return response
+
+b. <body>
+    <h3>page count : {{count}}</h3>
+</body>
+
+
+-------------------- middleware ----------
+a. 
+
+---------------------- security ----------
+a. csrf - cross site request forgery - a security feature
+
+-- authentication - to check if the user exist or not
+
+-- authorization - to check to what the user is having access/authorized to do
+
+----------------------- ORM ---------------
+a. many to many
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------- AWS EC2 - elastic cloud compute
+
+-- AMI - amazon machine image
+
+--------------------- A seven steps process to deploy to EC2 --------------
+a. $ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/reddy/.ssh/id_rsa):
+Created directory '/c/Users/reddy/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/reddy/.ssh/id_rsa
+Your public key has been saved in /c/Users/reddy/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:3nQuj+HRbQ9za0UXAjRux3ml2X15IAazw9en5vnuq2w reddy@ReddysPrakash
+The key's randomart image is:
++---[RSA 3072]----+
+|          +=+ . .|
+|         ..+o+.*+|
+|          +o.+=oB|
+|          .o. .o=|
+|        S . . o..|
+|       . o + + ..|
+|        . = o B o|
+|         . *.E B.|
+|          o ooo=*|
++----[SHA256]-----+
+
+
+---------------------------------------------- Dockerize the app --------------------
+a. 
+
+
+

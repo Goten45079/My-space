@@ -1,0 +1,12 @@
+Dear salagraws,
+
+I am excited to apply for the Site Reliability Engineer (SRE) position. With over three years of experience in SRE and DevOps at Tata Consultancy Services, I have a strong background in system monitoring, automation with Ansible, and incident management. My work on projects like Staples Advantage (Retail) and British Telecom has honed my skills in CI/CD pipeline development, error analysis, and ensuring system reliability.
+
+I am eager to bring my expertise and contribute to maintaining and scaling your infrastructure. Thank you for considering my application. I look forward to the opportunity to discuss how my skills can align with your team’s needs.
+
+resume attached
+
+Thanks and Regards,
+Prakash Perumandla,
+
+9676348543.

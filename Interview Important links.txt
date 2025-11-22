@@ -1,0 +1,16 @@
+Important links : 
+
+1. https://www.mygreatlearning.com/blog/add-python-to-path/#add-python-to-path-windows
+
+2. https://towardsdatascience.com/two-pointer-approach-python-code-f3986b602640
+
+3. Django learning path - https://dennisivy.com/django-skills-roadmap
+
+--------------------------- For shell/bash scripting -------------------------------------------
+a. https://devhints.io/bash
+
+================================================ SQL =======================================================================
+
+https://www.datacamp.com/blog/top-sql-interview-questions-and-answers-for-beginners-and-intermediate-practitioners --? this is enough for all the interview questions
+
+============================================================================================================================

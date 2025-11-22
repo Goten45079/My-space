@@ -1,0 +1,25 @@
+Hay Git with Bitbucket for Prakash
+
+------------------------Processes------------------------------------------
+--to push changes to bitbucket
+
+1. changes made in file - condition
+2. git add .
+3. git status
+4. git commit -m "message"
+5. git pull  #to make sure there are no other commits made in the bitbucket repo
+6. git push  #to push the changes to bitbucket
+
+----------------------- Commands ---------------------------------
+
+1. git --version  #to know the version of git on your machine
+
+2. git status  #to check the status
+
+3. git status --short  #to check the status in short formate (A, M, D)
+
+4. git commit -a -m "message"  #to skip the stagging environment #we can directly push with this #this is not recomended
+
+5. git log  #to check the git logs  IMP : press "q" to exit/get prompt
+
+6. git command -help  #to get to know how to use the command

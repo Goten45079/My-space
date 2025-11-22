@@ -1,0 +1,70 @@
+Ansible is configuration management tool
+ansible is agent less tool
+ansible can be used for - deployment, configuration management, provesioning, network automation
+ansible first started a configuration management tool but now it has become a powerul automation tool
+
+ansible roles advantages are readbility, modularity and sharing
+ansible-galaxy role init <roleName>
+
+YAML is a human readable serilization language
+
+MUST : spend two hrs in ansible official documentation
+MUST : study ansible-galaxy commands (which is like docker cli commands)
+
+Ad-hoc command(s)
+#ansible <group> -m copy -a “src=home/ansible dest=/tmo/home”
+
+#ansible <inventory_location> -m shell -a "sudo ls -l /etc" all/group
+
+sample ansible-playbook
+
+---
+- name: Name of the play book
+  hosts: all or any_group_name
+  become: true # this means you want to execute the commands as root user
+  gather_facts: yes
+
+  tasks:
+  - name: Name of the task. example install nginx
+    apt:
+     name: nginx
+     state: present
+
+or you have to install nginx on different linux 
+
+  tasks:
+  - name: install nginx based on linux
+
+    when: ansible_distribution == "Ubuntu"
+    apt:
+     name: nginx
+     state: present
+
+    when: ansible_distribution == "CentOS"
+    yum: 
+     name: nginx
+     state: present
+   
+  - name: install python modules using pip
+    pip:
+     name: "{{ item }}"
+     state: present
+    with_items:
+    - django
+    - flask
+    - request
+    - os
+
+================================================================================================================================
+Ansible tower --? It is a enterprise-level web-based solution 
+
+idempotency --? when play-book is executed it will check for new chnages and make changes accordingly
+
+Ansible galaxy --? a place to share play-books
+
+Ansible module --? it is a functions maintained by ansible
+
+
+
+  
+   

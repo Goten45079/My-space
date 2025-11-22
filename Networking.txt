@@ -1,0 +1,105 @@
+Networking for SRE
+
+1. IP address --? it is generated to create a unique address to device --? IPV4(32 bit) | IPV6(128 bit)
+IPV4 example 10.3.7.4 each number very from 0-255(8 bits) now total 32 bits for ipv4 standard.
+(256*256*256*256) unique id can exist in ipv4
+
+2. VPC --? virtual private cloud (AWS) , VNET --? virtual network (Azure)
+3. Subnet --? it is a logical subdivision of ip network or vpc
+there are two types of subnets -- private, public
+public subnet --?
+
+4. CIDR --? classless inter-domain routing
+192, 172, 10 are used for private subnets
+192.3.6.0/30 -- will have 4 ip address
+
+5. Ports -- OSI model
+computer -- browserr -- router -- switch -- 
+it has 7 layers - from which data is flowing
+a. DNS resolution -- DNS(domain naming serivce) is nothing but a simple DB which has domain names mapped to a ip address, which is maintained by every ISP(internet service provider) 
+b. TCP handshake(3-way handshake)
+
+layer 7 -- https/ftp -- which is also called as application layer
+layer 6 -- encryption/formatting -- presentation layer
+layer 5 -- session 
+above 3 layer happens at browser level
+layer 4 -- transportation layer -- segmentation of data will happen here -- tcp/udp protocall will be initiated
+layer 3 -- networking layer -- routing -- data packets will have the routs and address to travel -- ip addresse is attached to packets
+layer 2 -- data link layer -- where the data from packets converts to frames and attached with a mac address along with ip address from above layer
+layer 1 -- physical layer -- in this layer data is converted to electrical signal and transmitted thorugh optical fibers 
+
+
+==========================================================================================================================================
+Points for interview
+
+Tell me about yourself: Raw
+
+My self Prakash and I am from warangal telangana, I have graduated in the year 2021 from NITPY college then I joined this company TCS, in tcs I worked in two different projects "staples advantage" as SRE and in "british telecom" as devops/python developer. I have been working in tcs for more that 3 years
+
+Tell me about yourself: Enhanced
+
+My name is Prakash, and I’m from Warangal, Telangana. I graduated in 2021 from NIT Puducherry. After that, I joined TCS, where I’ve worked for over 3 years on two major projects—'Staples Advantage' as an SRE and 'British Telecom' as a DevOps/Python Developer.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Please explain about the projects that you have worked on and you role in it
+
+MTTR - minimum time to respond
+
+I worked in Staples advantage project as an sre
+my responsibiliites are 
+a. continuous monitoring / oncall --? for continuous monitoring we use tools like splunk and newrelic, where splunk is used for alerts and newrelic for synthetic scripts
+b. incident management --? as soon as we recieve any p2 alert for splunk we take around 10 min to analyse before escelation because sometimes the p2 alert may be due to the ongoing performance testing or qualys
+c. atuomation using ansible and jenkins
+d. monthly error and incident analysis --? when I joined the project the reliability of the system is 99.2% in two years we improved it to 99.998 - 99.999
+e. bottelneck identification
+
+British Telecom : 
+a. deployment using ansible and jenkins, server issues handeling, 
+b. worked on high priority python stories for business requirement
+
+Meeting ID: 228 444 818 093
+
+Passcode: stK729
+
+https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZjgwZDQxYTAtNDg3MC00NTJiLWFmZDctMjM2MDFhMjQ0YTMz%40thread.v2/0?context=%7b%22Tid%22%3a%2263ce7d59-2f3e-42cd-a8cc-be764cff5eb6%22%2c%22Oid%22%3a%22c2d12972-d679-4d56-bd71-cf12093a7b94%22%7d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SRE POINTS:
+Working as an SRE at staples advantage, continuous monitoring, incident resolving, automated scripts, bug bounty program, bug detections, creation and altering alerts, release support, automation with ansible, error analyis, Conducted continuous analysis using monitoring tools to identify and resolve potential issues, creating Jira tickets to document and track identified bugs, Identification of bottlenecks and preparation of recommendations to improve the reliability of services, Responding to platform emergencies, localizing and resolving the causes of failures, compiling postmortem reports
+
+
+
+DEVOPS POINTS:
+working as devops at Btitish telecom, 
+creating and maintaining pipelines, CICD, resolving issue with servers and pipelines,creating ansible playbooks, working python related stories which is business requirement
+
+
+Site Reliability Engineer at Staples Advantage
+Conducted continuous monitoring, incident management, and automated scripting to maintain system performance.
+Participated in bug bounty programs and managed alerts for proactive issue detection and resolution.
+Supported software releases, ensuring smooth deployment and post-release monitoring.
+Implemented automation with Ansible, reducing deployment times and enhancing consistency.
+Analyzed errors, identified system bottlenecks, and compiled postmortem reports to improve reliability.
+
+

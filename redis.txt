@@ -1,0 +1,13 @@
+redis is a nosql db
+it will increase the performance of the service
+https://quickref.me/redis.html
+
+docker commands :
+1. docker run -d --name prakash-redis --rm -p 7890:6379 redis --> this will create a container and run 
+2. winpty docker exec -it prakash-redis redis-cli
+ set name prakash
+ get name --> will result name
+
+------------------------------------------ django - redis --------------------------------
+
+

@@ -1,0 +1,72 @@
+AWS
+
+------------------------------- Introduction -----------------------------------------
+1. Cloud is a distributed collection of servers that host a software which can be accessed over internet
+
+2. 
+
+----------------------------------- AWS IAM(Identity and Access Management) ----------------------------------
+
+there are two concepts which are Authericenticity and accessability
+
+--------------------------------------- EC2 --------------------------------------
+1. what are the different types of EC2 instances? general, memory, compute, storage, acclerated
+2. EC2 provides compute as a service
+
+------------------------------------- VPC ----------------------------------------------
+
+VPC (virtual private cloud) -- defining the range of IP addresses -- count 256*256 in number
+
+subnets -- dividing the range of IP addressed and each range is called as subnet
+
+route table -- defines the where network traffic is directed
+
+------------------------------------------- security group ---------------------------------
+SG and NACL(network access control list) -- these two are the security settings
+SG (security group) is applied at the instance level
+NACL (network access control list) is applied at the subnet level
+
+if some security is defined at subnet level(NACL) by default it will be applied to all the instances in side the subnet
+
+---------------------------------- route53 ------------------------
+
+route 53 will provide DNS(domain naming system) as a service 
+
+this service is for domain regesteration and hosted zones and health checks
+
+---------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------- AWS Project ---------------------------------------------------------------
+1. creating a VPC (virtual private cloud) with two availablity zones
+
+2. create a auto scaling group and add your instance to it -- should be in private subnet
+a. create a template for auto scaling
+
+3. create a jump server and add keys to it for login in to the servers in private sub net
+
+4. create a load balancer in the public subnet
+a. create target group and target EC2 instances
+
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-example-private-subnets-nat.html
+
+-------------------------------------------------------- S3 bucket -------------------------
+1. it is accessable globally
+
+2. can host static websites
+
+-------------------------------------------------------- AWS CLI ----------------------------------------------
+1. aws s3 ls
+2. aws s3api list-buckets
+
+------------------------------------------------ AWS CFT (cloud formation templates) -----------------------------------------
+1.  it is IAC infrastructure as code
+2. 
+
+--------------------------------------------------- AWS CI/CD ---------------------------------------
+a. aws codecommit
+b. aws codepipeline
+c. aws codebuild
+d. aws codedeploy
+
+
+
+

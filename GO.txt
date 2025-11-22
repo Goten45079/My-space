@@ -1,0 +1,37 @@
+This is for Golang
+
+----------- After writing a code.
+
+1. go run <fileName> -- to run the code -- execute this command in terminal -- code will get complied and gets converted in to .exe file and then its runs the .exe file to give the out put -- after giving the output .exe file gets deleted.
+
+2. go build <fileName> -- compiles the file and then convert into .exe file.
+
+3. go help -- to get all the tool set
+
+4. lexer -- it check the grammer fo the language/ syntax
+
+5. everything is a type in golang, same like everything is a object in python
+
+6. Types in go
+a. string
+b. bool
+c. int8, int64, uintptr, uint8, uint64
+d. float32, float64
+e. complex 'i'
+f. array
+g. slices
+h. maps
+i. structs,
+j. pointers
+
+7. printing
+a. fmt.Println("hello") -- this is for just printing
+b. fmt.Printf("hello %v", variable_name) -- this is formated type printing.
+
+8.  
+
+----------------------- frame work GIN
+
+
+
+

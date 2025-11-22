@@ -1,0 +1,67 @@
+Azure-zero-to-hero
+
+Services in Azure : 
+1. VNET - virtual network - it is logical isolation of netowrk within the microsoft physical network
+CIDR - classless inter domain routing
+
+Storage types : blob, files, tables and queues
+For managing storages we have to create storage account
+
+blob storage - is used for storing large amount of unstructured data (large files, images, videos etc)
+file storage - is used for k8s, so that multiple pods can access a single file system (like volumes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SRE - points in resume
+building fault-tolerant systems and implementing disaster recovery plans to ensure infrastructure resilience and reliability
+Actively contributed to the Staples project for 2 years within a production support team.
+Primary responsibility involved ongoing monitoring of critical user tools like Splunk and New Relic.
+Conducted continuous analysis using monitoring tools to identify and resolve potential issues.
+Played a crucial role in bug management by consistently creating Jira tickets to document and track identified bugs.
+
+Linux Fundamentals: Understand the basics of Linux operating systems, including file systems, command-line usage, and administration.
+Networking: Learn about TCP/IP, DNS, HTTP, load balancing, and network troubleshooting.
+Scripting and Automation: Gain proficiency in scripting languages such as Python, Bash, or Perl to automate tasks and streamline processes.
+Cloud Computing Platforms: Familiarize yourself with major cloud providers like AWS, Azure, and Google Cloud Platform, including services like compute, storage, networking, and databases.
+Infrastructure as Code (IaC): Learn tools like Terraform, Ansible, or Puppet for managing infrastructure declaratively, enabling automation and reproducibility.
+Monitoring and Alerting: Understand monitoring tools like Prometheus, Grafana, Nagios, and know how to set up alerts for key metrics.
+Logging and Tracing: Learn about centralized logging systems such as ELK stack (Elasticsearch, Logstash, Kibana) or Fluentd, and distributed tracing tools like Jaeger or Zipkin.
+Containerization and Orchestration: Gain expertise in Docker for containerization and Kubernetes for orchestration to manage containerized applications efficiently.
+Continuous Integration/Continuous Deployment (CI/CD): Understand CI/CD pipelines and tools like Jenkins, GitLab CI, or CircleCI for automating software delivery processes.
+Reliability Engineering Principles: Familiarize yourself with SRE principles, including error budgets, service level objectives (SLOs), and service level indicators (SLIs).
+Fault Tolerance and Disaster Recovery: Learn about strategies for building fault-tolerant systems and implementing disaster recovery plans.
+Security Best Practices: Understand security principles and best practices for securing systems and applications, including encryption, access control, and vulnerability management.
+Performance Optimization: Gain skills in optimizing system performance, including identifying and resolving bottlenecks in applications and infrastructure.
+Collaboration and Communication: Develop strong communication and collaboration skills, as SRE often involves working closely with development, operations, and other teams.
+Problem-Solving and Troubleshooting: Cultivate strong problem-solving and troubleshooting skills to diagnose and resolve issues quickly and efficiently.
+
+automation for APIs to resolve incidents
+automation runbooks and documenting operations in confluence
+incident management
+ubuntu - docker stage zero
+
+Identification of bottlenecks and preparation of recommendations to improve the reliability of services;
+Responding to platform emergencies, localizing and resolving the causes of failures, compiling postmortem reports;
+Development of monitoring and alerting tools ensuring high availability and quick detection of potential issues: (Grafana, Grafana OnCall, Prometheus Alert manager, etc.);
+Active participation in change management processes, including assessment and coordination of changes to the infrastructure within Change Advisory Board (CAB) sessions;
+Implementation and support of ITSM processes to optimize team workflow and enhance service quality.
+Development and maintenance of documentation in an up-to-date state.
