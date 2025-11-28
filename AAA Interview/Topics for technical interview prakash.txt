@@ -1,0 +1,20 @@
+1. git
+2. docker
+3. terraform
+4. cloud AWS/Azure
+5. jenkins
+6. ansible
+7. k8s
+8. python
+9. data stuctures
+10. algorithms
+11. python basic progaming logics
+12. python fastapi 
+13. python agentic AI
+14. python RAG
+15. python ML
+16. python AI termenology
+17. deployment
+18. linux
+19. python agentic AI project
+20. 
